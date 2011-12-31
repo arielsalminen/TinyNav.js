@@ -11,25 +11,25 @@ Javascript:
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="tinynav.min.js"></script>
     <script>
-      jQuery(function() {
-        $('ul').tinyNav();
-      });
+        jQuery(function() {
+            $('ul').tinyNav();
+        });
     </script>
 
 Options:
-  $('ul').tinyNav({activeClass:'active'}); // Change the active class that is used on list items.
+    $('ul').tinyNav({activeClass:'active'}); // Change the active class that is used on list items.
 
 CSS:
-  
-  /* styles for desktop */
-  select { display: none }
-  .active a { color: red }
-  
-  /* styles for mobile */
-  @media screen and (max-width: 600px) {
-    .tinynav select { display: block }
-    .tinynav ul { display: none }
-  }
+
+    /* styles for desktop */
+    select { display: none }
+    .active a { color: red }
+    
+    /* styles for mobile */
+    @media screen and (max-width: 600px) {
+        .tinynav select { display: block }
+        .tinynav ul { display: none }
+    }
 
 The plugin adds `tinynav` class for the `<html>` element. You should use that when hiding the navigation so that the navigation still works if someone browses the site JS disabled (example is provided in the example.html file).
 
