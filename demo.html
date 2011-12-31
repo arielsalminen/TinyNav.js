@@ -5,12 +5,12 @@
   <title>TinyNav.js &middot; Convert navigation to a tiny select box on small screen</title>
   <style>
     /* styles for desktop */
-    select { display: none }
+    .tinynav { display: none }
     .active a { color: red }
     /* styles for mobile */
     @media screen and (max-width: 600px) {
-      .tinynav select { display: block }
-      .tinynav ul { display: none }
+      .tinynav { display: block }
+      ul { display: none }
     }
   </style>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>

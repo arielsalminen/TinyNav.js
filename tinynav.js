@@ -7,11 +7,9 @@
       'activeClass' : 'active'
     };
 
-    $('html').addClass('tinynav');
-
     return this.each(function () {
       var $this = $(this),
-        $sel = $('<select></select>');
+        $sel = $('<select class="tinynav"></select>');
 
       if (options) {
         $.extend(settings, options);
