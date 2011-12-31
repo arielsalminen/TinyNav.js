@@ -19,21 +19,20 @@ Javascript:
 
 Options:
 
-    $('ul').tinyNav({activeClass:'active'}); // Change the active class that is used on list items.
+    $('ul').tinyNav({ activeClass:'active' }); // Change the active class that is used on list items.
 
 CSS:
 
     /* styles for desktop */
-    select { display: none }
-    .active a { color: red }
+    .tinynav { display: none }
     
     /* styles for mobile */
     @media screen and (max-width: 600px) {
-        .tinynav select { display: block }
-        .tinynav ul { display: none }
+        .tinynav { display: block }
+        ul { display: none }
     }
 
-The plugin adds `tinynav` class for the `<html>` element. You should use that when hiding the navigation so that the navigation still works if someone browses the site JS disabled (example is provided in the example.html file).
+NOTE: You should probably add `js` class for `<html>` with javascript and use that in CSS when hiding the normal navigation so that navigation is still accessible if someone is browsing the site JavaScript disabled.
 
 For a demo, download this repository as a ZIP file and open example.html.
 
