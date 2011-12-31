@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TinyNav.js &middot; Convert navigation to a tiny select box on small screen</title>
+  <style>
+    /* styles for desktop */
+    select { display: none }
+    .active a { color: red }
+    /* styles for mobile */
+    @media screen and (max-width: 600px) {
+      .tinynav select { display: block }
+      .tinynav ul { display: none }
+    }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="tinynav.min.js"></script>
+  <script>
+    jQuery(function () {
+      $('ul').tinyNav();
+    });
+  </script>
+</head>
+<body>
+    <h1>TinyNav.js</h1>
+    <ul>
+      <li><a href="http://google.com">Google</a></li>
+      <li class="active"><a href="demo.html">Demo page</a></li>
+      <li><a href="http://bing.com">Bing</a></li>
+      <li><a href="http://yahoo.com">Yahoo</a></li>
+    </ul>
+</body>
+</html>
