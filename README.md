@@ -8,6 +8,7 @@ Usage Instructions and demo
 ======
 
 Javascript:
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="tinynav.min.js"></script>
     <script>
@@ -17,6 +18,7 @@ Javascript:
     </script>
 
 Options:
+
     $('ul').tinyNav({activeClass:'active'}); // Change the active class that is used on list items.
 
 CSS:
