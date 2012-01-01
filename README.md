@@ -1,7 +1,9 @@
 # TinyNav.js
 ### Responsive navigation plugin that weights just ~300bytes
 
-TinyNav.js is a tiny jQuery plugin (296 bytes gzipped) that converts `<ul>` and `<ol>` navigation to a select menu. It might not provide as many options as other similar plugins, but at least it's _very tiny_.
+TinyNav.js is a tiny jQuery plugin (296 bytes gzipped) that converts `<ul>` and `<ol>` navigations to a select boxes on small screen. It also automatically selects the current page and adds `selected="selected"` for that item.
+
+This isn't the first plugin to help with this task and I'm not saying that it provides a lot of options that you can configure, but I think that none of the others are this small.
 
 
 Usage Instructions and demo
@@ -19,7 +21,7 @@ Javascript:
 
 Options:
 
-    $('ul').tinyNav({ active:'selected' }); // Change the active class that is used on list items.
+    $('ul').tinyNav({ active:'selected' }); // Set the "active" class that you use on your list items
 
 CSS:
 
@@ -32,14 +34,12 @@ CSS:
         ul { display: none }
     }
 
-NOTE: You should probably add `js` class for `<html>` with javascript and use that in CSS when hiding the normal navigation so that navigation is still accessible if someone is browsing the site JavaScript disabled. Example:
+NOTE ABOUT JAVASCRIPT: If you worry how this will work when JS is disabled, then I suggest you to add class `js` for `<html>` with javascript and use that in CSS when hiding the normal navigation so that the navigation is still accessible if someone is browsing the site JavaScript disabled. Like this:
 
-JS:
-
+    JS:
     $('html').addClass('js');
-
-CSS:
-
+    
+    CSS:
     @media screen and (max-width: 600px) {
         .js .tinynav { display: block }
         .js ul { display: none }
