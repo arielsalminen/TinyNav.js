@@ -22,7 +22,7 @@ Javascript:
 Options:
 
     $('#nav').tinyNav({
-        active: 'selected' // Set the "active" class that you use on your list items.
+        active: 'selected', // Set the "active" class that you use on your list items.
         namespace: 'tinynav' // Change the default namespace that TinyNav uses.
     });
 
