@@ -37,7 +37,7 @@ CSS:
         #nav { display: none }
     }
 
-NOTE ABOUT JAVASCRIPT: If you worry how this will work when JS is disabled, then I suggest you to add class `js` for `<html>` with javascript and use that in CSS when hiding the normal navigation so that the navigation is still accessible if someone is browsing the site JavaScript disabled. Like this:
+NOTE ABOUT JAVASCRIPT: If you worry how this will work when JS is disabled, then I suggest you to add `js` class for `<html>` with JavaScript and use that in CSS when hiding the normal navigation, so that the navigation is still accessible if someone is browsing the site JavaScript disabled. Like this:
 
     JS:
     $('html').addClass('js');
