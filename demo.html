@@ -6,24 +6,24 @@
   <style>
     /* styles for desktop */
     .tinynav { display: none }
-    .selected a { color: red }
+    #nav .selected a { color: red }
     /* styles for mobile */
     @media screen and (max-width: 600px) {
       .tinynav { display: block }
-      ul { display: none }
+      #nav { display: none }
     }
   </style>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script src="tinynav.min.js"></script>
   <script>
-    jQuery(function () {
-      $('ul').tinyNav();
+    $(function () {
+      $('#nav').tinyNav();
     });
   </script>
 </head>
 <body>
     <h1>TinyNav.js</h1>
-    <ul>
+    <ul id="nav">
       <li><a href="http://google.com">Google</a></li>
       <li class="selected"><a href="demo.html">Demo page</a></li>
       <li><a href="http://bing.com">Bing</a></li>

@@ -1,7 +1,7 @@
 # TinyNav.js
 ### Responsive navigation plugin that weights just ~300bytes
 
-TinyNav.js is a tiny jQuery plugin (296 bytes gzipped) that converts `<ul>` and `<ol>` navigations to a select boxes on small screen. It also automatically selects the current page and adds `selected="selected"` for that item.
+TinyNav.js is a tiny jQuery plugin (350 bytes gzipped) that converts `<ul>` and `<ol>` navigations to a select boxes on small screen. It also automatically selects the current page and adds `selected="selected"` for that item.
 
 This isn't the first plugin to help with this task and I'm not saying that it provides a lot of options that you can configure, but I think that none of the others are this small.
 
@@ -15,13 +15,16 @@ Javascript:
     <script src="tinynav.min.js"></script>
     <script>
         $(function() {
-            $('ul').tinyNav();
+            $('#nav').tinyNav();
         });
     </script>
 
 Options:
 
-    $('ul').tinyNav({ active:'selected' }); // Set the "active" class that you use on your list items
+    $('#nav').tinyNav({
+        active: 'selected' // Set the "active" class that you use on your list items.
+        namespace: 'tinynav' // Change the default namespace that TinyNav uses.
+    });
 
 CSS:
 
@@ -31,7 +34,7 @@ CSS:
     /* styles for mobile */
     @media screen and (max-width: 600px) {
         .tinynav { display: block }
-        ul { display: none }
+        #nav { display: none }
     }
 
 NOTE ABOUT JAVASCRIPT: If you worry how this will work when JS is disabled, then I suggest you to add class `js` for `<html>` with javascript and use that in CSS when hiding the normal navigation so that the navigation is still accessible if someone is browsing the site JavaScript disabled. Like this:
@@ -42,7 +45,7 @@ NOTE ABOUT JAVASCRIPT: If you worry how this will work when JS is disabled, then
     CSS:
     @media screen and (max-width: 600px) {
         .js .tinynav { display: block }
-        .js ul { display: none }
+        .js #nav { display: none }
     }
 
 For a demo, download this repository as a ZIP file and open example.html.
