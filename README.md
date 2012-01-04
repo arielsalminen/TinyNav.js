@@ -1,5 +1,5 @@
 # TinyNav.js
-### Responsive navigation plugin that weights just 350 bytes
+### Responsive navigation plugin that weights just 319 bytes
 
 [TinyNav.js](http://tinynav.viljamis.com/) is a tiny jQuery plugin (319 bytes minified and gzipped) that converts `<ul>` and `<ol>` navigations to a select boxes for small screen. It also automatically selects the current page and adds `selected="selected"` for that item.
 
