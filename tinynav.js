@@ -1,4 +1,4 @@
-/*! TinyNav.js v1.01. (c) 2011-2012 Viljami Salminen. MIT License. http://tinynav.viljamis.com */
+/*! TinyNav.js v1.01. (c)2011-2012 Viljami Salminen. MIT License. http://tinynav.viljamis.com */
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
     var settings = {
