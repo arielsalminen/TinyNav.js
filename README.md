@@ -29,4 +29,5 @@ Changelog
 ======
 
 v1.01 (2012-01-04) - Code Refactoring (dropped the file size from 351 bytes to 319 bytes)
+
 v1.00 (2011-12-31) - Release
