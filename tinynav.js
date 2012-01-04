@@ -1,38 +1,39 @@
-/*! TinyNav.js v1.0. (c) 2011-2012 Viljami Salminen. MIT License. http://tinynav.viljamis.com */
-(function ($) {
-  var i = 0;
+/*! TinyNav.js v1.01. (c) 2011-2012 Viljami Salminen. MIT License. http://tinynav.viljamis.com */
+(function ($, window, i) {
   $.fn.tinyNav = function (options) {
     var settings = {
       'active' : 'selected',
       'namespace' : 'tinynav'
     };
     return this.each(function () {
-      i = i + 1;
-      var $this = $(this),
+      i++;
+      var $nav = $(this),
         namespace = settings.namespace,
-        $select = $('<select class="' + namespace + ' ' + namespace + i + '"></select>');
+        namespace_i = namespace + i,
+        l_namespace_i = '.l_' + namespace_i,
+        $select = $('<select/>').addClass(namespace, namespace_i);
       if (options) {
         $.extend(settings, options);
       }
-      if ($this.is('ul,ol')) {
-        $this.addClass('l_' + namespace + i);
-        o = '';
-        $('.l_' + namespace + i + ' a').each(function () {
-          o +=
-            '<option value="' + $(this).attr('href') + '">' +
-            $(this).text() +
-            '</option>';
-        });
+      if ($nav.is('ul,ol')) {
+        $nav
+          .addClass('l_' + namespace_i)
+          .find('a').each(function () {
+            $select.append(
+              $('<option/>')
+               .text($(this).text())
+               .val($(this).attr('href'))
+            );
+          });
         $select
-          .append(o)
-          .find(':eq(' + $('.l_' + namespace + i + ' li')
-          .index($('.l_' + namespace + i + ' li.' + settings.active)) + ')')
-          .attr('selected', 'selected');
-        $select.bind('change', function () {
-          document.location.href = $(this).val();
+          .find(':eq(' + $(l_namespace_i + ' li')
+          .index($(l_namespace_i + ' li.' + settings.active)) + ')')
+          .attr('selected', true);
+        $select.change(function () {
+          window.location.href = $(this).val();
         });
-        $('.l_' + namespace + i).after($select);
+        $(l_namespace_i).after($select);
       }
     });
   };
-})(jQuery);
+})(jQuery, this, 0);
