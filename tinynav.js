@@ -2,13 +2,12 @@
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
     var settings = {
-      'active' : 'selected',
-      'namespace' : 'tinynav'
+      'active' : 'selected'
     };
     return this.each(function () {
       i++;
       var $nav = $(this),
-        namespace = settings.namespace,
+        namespace = 'tinynav',
         namespace_i = namespace + i,
         l_namespace_i = '.l_' + namespace_i,
         $select = $('<select/>').addClass(namespace, namespace_i);
