@@ -2,7 +2,8 @@
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
     var settings = {
-      'active' : 'selected'
+      'active' : 'selected',
+      'showHeader': false
     };
     return this.each(function () {
       i++;
@@ -15,6 +16,13 @@
         $.extend(settings, options);
       }
       if ($nav.is('ul,ol')) {
+        if (settings.showHeader) {
+          $select.append(
+            $('<option/>')
+             .text('--- Select ---')
+          );
+        };
+        
         $nav
           .addClass('l_' + namespace_i)
           .find('a').each(function () {
