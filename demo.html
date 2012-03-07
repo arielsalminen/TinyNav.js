@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>TinyNav.js &middot; Convert navigation to a tiny select box on small screen</title>
+
   <style>
     /* styles for desktop */
     .tinynav { display: none }
@@ -14,22 +16,33 @@
       #nav { display: none }
     }
   </style>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="tinynav.min.js"></script>
   <script>
     $(function () {
-      $('#nav').tinyNav();
+
+      // TinyNav.js
+      $('#nav').tinyNav({
+        active: 'selected'
+      });
+
     });
   </script>
+
 </head>
 <body>
+
     <h1>TinyNav.js</h1>
+
     <ul id="nav">
       <li><a href="http://google.com">Google</a></li>
       <li class="selected"><a href="demo.html">Demo page</a></li>
       <li><a href="http://bing.com">Bing</a></li>
       <li><a href="http://yahoo.com">Yahoo</a></li>
     </ul>
+
     <p><a href="http://tinynav.viljamis.com/">See the documentation</a></p>
+
 </body>
 </html>
