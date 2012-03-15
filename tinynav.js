@@ -4,8 +4,8 @@
 
     // Default settings
     var settings = $.extend({
-      'active' : 'selected',
-      'header' : false
+      'active' : 'selected', // String: Set the "active" class
+      'header' : false // Boolean: Show header instead of the active item
     }, options);
 
     return this.each(function () {
