@@ -1,15 +1,20 @@
-/*! TinyNav.js v1.02. (c)2011-2012 Viljami Salminen. MIT License. http://tinynav.viljamis.com */
+/*! http://tinynav.viljamis.com v1.03 by @viljamis */
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
 
+    // Default settings
     var settings = $.extend({
-      'active' : 'selected'
+      'active' : 'selected',
+      'header' : false
     }, options);
 
     return this.each(function () {
+
+      // Used for namespacing
       i++;
 
       var $nav = $(this),
+        // Namespacing
         namespace = 'tinynav',
         namespace_i = namespace + i,
         l_namespace_i = '.l_' + namespace_i,
@@ -17,6 +22,13 @@
 
       if ($nav.is('ul,ol')) {
 
+        if (settings.header) {
+          $select.append(
+            $('<option/>').text('Navigation')
+          );
+        }
+
+        // Build options
         var options = '';
 
         $nav
@@ -29,16 +41,23 @@
               '</option>';
           });
 
-        $select
-          .append(options)
-          .find(':eq(' + $(l_namespace_i + ' li')
-          .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-          .attr('selected', true);
+        // Append options into a select
+        $select.append(options);
 
+        // Select the active item
+        if (!settings.header) {
+          $select
+            .find(':eq(' + $(l_namespace_i + ' li')
+            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
+            .attr('selected', true);
+        }
+
+        // Change window location
         $select.change(function () {
           window.location.href = $(this).val();
         });
 
+        // Inject select
         $(l_namespace_i).after($select);
 
       }
