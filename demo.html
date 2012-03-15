@@ -9,11 +9,11 @@
   <style>
     /* styles for desktop */
     .tinynav { display: none }
-    #nav .selected a { color: red }
+    #nav .selected a, #nav2 .selected a { color: red }
     /* styles for mobile */
     @media screen and (max-width: 600px) {
       .tinynav { display: block }
-      #nav { display: none }
+      #nav, #nav2 { display: none }
     }
   </style>
 
@@ -22,9 +22,14 @@
   <script>
     $(function () {
 
-      // TinyNav.js
+      // TinyNav.js 1
       $('#nav').tinyNav({
         active: 'selected'
+      });
+      
+      // TinyNav.js 2
+      $('#nav2').tinyNav({
+        header: true
       });
 
     });
@@ -39,6 +44,14 @@
       <li><a href="http://google.com">Google</a></li>
       <li class="selected"><a href="demo.html">Demo page</a></li>
       <li><a href="http://bing.com">Bing</a></li>
+      <li><a href="http://yahoo.com">Yahoo</a></li>
+    </ul>
+    
+    
+    <ul id="nav2">
+      <li><a href="http://google.com">Google</a></li>
+      <li><a href="demo.html">Demo page</a></li>
+      <li class="selected"><a href="http://bing.com">Bing</a></li>
       <li><a href="http://yahoo.com">Yahoo</a></li>
     </ul>
 
