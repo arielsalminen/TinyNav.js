@@ -5,7 +5,10 @@
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : false // Boolean: Show header instead of the active item
+      'header' : false, // Boolean: Show header instead of the active item
+      'optionValue': function(link) {
+        return $(link).text();
+      } // Function: Used to extract the option value from the link
     }, options);
 
     return this.each(function () {
@@ -37,7 +40,7 @@
           .each(function () {
             options +=
               '<option value="' + $(this).attr('href') + '">' +
-              $(this).text() +
+              settings.optionValue(this) +
               '</option>';
           });
 
