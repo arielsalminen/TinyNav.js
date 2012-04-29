@@ -5,7 +5,8 @@
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : false // Boolean: Show header instead of the active item
+      'header' : false, // Boolean: Show header instead of the active item
+      'headerTitle' : 'Navigation' // String: Set header title
     }, options);
 
     return this.each(function () {
@@ -24,7 +25,7 @@
 
         if (settings.header) {
           $select.append(
-            $('<option/>').text('Navigation')
+            $('<option/>').text(settings.headerTitle)
           );
         }
 
@@ -44,12 +45,19 @@
         // Append options into a select
         $select.append(options);
 
-        // Select the active item
+        // Index of selected item
+  	    $selected = $select.find(':eq(' + $(l_namespace_i + ' li').index($(l_namespace_i + ' li.' + settings.active)) + ')');
+		
+		    // Select the active item
         if (!settings.header) {
-          $select
-            .find(':eq(' + $(l_namespace_i + ' li')
-            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
+          $selected.attr('selected', true);
+        }
+		    else {
+          // Header is index 0. Push index of selected item.
+		      $selectedNew = $selected.index()+1;
+		      if($selectedNew > 0){
+            $select.find(':eq(' + $selectedValue + ')').attr('selected', true);
+		      }
         }
 
         // Change window location
