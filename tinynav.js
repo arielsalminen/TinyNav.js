@@ -5,7 +5,8 @@
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : false // Boolean: Show header instead of the active item
+      'selector' : 'a', // String: Override targeting of the anchors
+      'header' : false // Boolean: Show header instead of the active item 
     }, options);
 
     return this.each(function () {
@@ -33,7 +34,7 @@
 
         $nav
           .addClass('l_' + namespace_i)
-          .find('a')
+          .find(settings.selector)
           .each(function () {
             options +=
               '<option value="' + $(this).attr('href') + '">' +
