@@ -13,7 +13,7 @@
     /* styles for mobile */
     @media screen and (max-width: 600px) {
       .tinynav { display: block }
-      #nav, #nav2 { display: none }
+      #nav, #nav2, #nav3 { display: none }
     }
   </style>
 
@@ -29,6 +29,11 @@
       
       // TinyNav.js 2
       $('#nav2').tinyNav({
+        header: true
+      });
+
+      // TinyNav.js 3
+      $('#nav3').tinyNav({
         header: true
       });
 
@@ -49,6 +54,13 @@
     
     
     <ul id="nav2">
+      <li><a href="http://google.com">Google</a></li>
+      <li><a href="demo.html">Demo page</a></li>
+      <li class="selected"><a href="http://bing.com">Bing</a></li>
+      <li><a href="http://yahoo.com">Yahoo</a></li>
+    </ul>
+
+    <ul id="nav3" data-header="Optional Header Title">
       <li><a href="http://google.com">Google</a></li>
       <li><a href="demo.html">Demo page</a></li>
       <li class="selected"><a href="http://bing.com">Bing</a></li>
