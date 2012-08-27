@@ -22,9 +22,16 @@
 
       if ($nav.is('ul,ol')) {
 
-        if (settings.header) {
+        if (settings.header)
+        {
+          var headerText = 'Navigation';
+          var headerData = $nav.data().header;
+
+          if(headerData != '')
+            headerText = headerData;
+          
           $select.append(
-            $('<option/>').text('Navigation')
+            $('<option/>').text(headerData)
           );
         }
 
