@@ -1,17 +1,23 @@
-/*! http://tinynav.viljamis.com v1.03 by @viljamis */
+/*! http://tinynav.viljamis.com v1.04 by @viljamis */
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
 
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : false // Boolean: Show header instead of the active item
+      'header' : false, // Boolean: Show header instead of the active item
+      'hideOriginal' : false // Boolean: Hide the original navigation
     }, options);
 
     return this.each(function () {
 
       // Used for namespacing
       i++;
+
+      //hide original nav
+      if(settings.hideOriginal){
+        $(this).hide();
+      }
 
       var $nav = $(this),
         // Namespacing

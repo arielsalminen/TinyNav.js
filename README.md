@@ -28,6 +28,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Changelog
 ======
 
+v1.04 (2012-08-28) - Adds new option called "hideOriginal", thanks to [@bftrick](https://github.com/BFTrick)
+
 v1.03 (2012-03-15) - Adds new option called "header", thanks to [@jorde](https://github.com/jorde)
 
 v1.02 (2012-03-07) - Some performance improvements and a bug fix
