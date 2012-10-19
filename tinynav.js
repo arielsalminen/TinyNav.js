@@ -1,4 +1,4 @@
-/*! http://tinynav.viljamis.com v1.04 by @viljamis */
+/*! http://tinynav.viljamis.com v1.05 by @viljamis */
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
 
@@ -36,8 +36,9 @@
           .find('a')
           .each(function () {
             options += '<option value="' + $(this).attr('href') + '">';
-            for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) { 
-               options += '- ';
+            var j;
+            for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
+              options += '- ';
             }
             options += $(this).text() + '</option>';
           });
