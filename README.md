@@ -28,6 +28,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Changelog
 ======
 
+v1.04 (2012-10-19) - Adds the possibility to change the text of the header. Notice that there seems to be a bug in jQuery 1.8.0 which prevents this script from working correctly if there is no selected item in the navigation (the plugin does work with older and newer versions correctly though, currently tested up to 1.8.2).
+
 v1.03 (2012-03-15) - Adds new option called "header", thanks to [@jorde](https://github.com/jorde)
 
 v1.02 (2012-03-07) - Some performance improvements and a bug fix
