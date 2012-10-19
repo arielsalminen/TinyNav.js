@@ -35,10 +35,11 @@
           .addClass('l_' + namespace_i)
           .find('a')
           .each(function () {
-            options +=
-              '<option value="' + $(this).attr('href') + '">' +
-              $(this).text() +
-              '</option>';
+            options += '<option value="' + $(this).attr('href') + '">';
+            for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) { 
+               options += '- ';
+            }
+            options += $(this).text() + '</option>';
           });
 
         // Append options into a select
