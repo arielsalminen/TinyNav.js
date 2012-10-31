@@ -5,7 +5,7 @@
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : '' // String: Specify text for "header" and show header instead of the active item
+      'header' : '', // String: Specify text for "header" and show header instead of the active item
       'label'  : '' // String: sets the <label> text for the <select>
     }, options);
 
@@ -65,11 +65,11 @@
 
         // Inject label
         if  (settings.label !== '') {
-          $select.before( 
+          $select.before(
             $("<label/>")
               .attr("for", namespace_i)
               .addClass(namespace + ' ' + namespace_i)
-              .append(settings.label);
+              .append(settings.label)
           );
         }
 
