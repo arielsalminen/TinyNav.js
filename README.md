@@ -39,3 +39,9 @@ v1.02 (2012-03-07) - Some performance improvements and a bug fix
 v1.01 (2012-01-04) - Code Refactoring
 
 v1.00 (2011-12-31) - Release
+
+
+Want to do a pull request?
+======
+
+Great! New ideas are more than welcome, but please check the [Pull Request Guidelines](https://github.com/viljamis/TinyNav.js/wiki/Pull-Request-Guidelines) first before doing so.
