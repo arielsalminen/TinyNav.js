@@ -6,7 +6,7 @@
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
-      'label'  : '' // String: sets the <label> text for the <select>
+      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
     }, options);
 
     return this.each(function () {
