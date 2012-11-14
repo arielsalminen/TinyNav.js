@@ -28,6 +28,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Changelog
 ======
 
+v1.1 (2012-11-14) - Adds an optional "label" tag before the "select" tag, thanks to [@larcher](https://github.com/larcher)
+
 v1.05 (2012-10-19) - Adds the support for multiple navigation depths, thanks to [@nicoandrade](https://github.com/nicoandrade)
 
 v1.04 (2012-10-19) - Adds the possibility to change the text of the header. Notice that there seems to be a bug in jQuery 1.8.0 which prevents this script from working correctly if there is no selected item in the navigation (the plugin does work with older and newer versions correctly though, currently tested up to 1.8.2).
