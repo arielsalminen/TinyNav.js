@@ -5,7 +5,8 @@
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : '' // String: Specify text for "header" and show header instead of the active item
+      'header' : '', // String: Specify text for "header" and show header instead of the active item
+      'label'  : '' // String: sets the <label> text for the <select>
     }, options);
 
     return this.each(function () {
@@ -18,7 +19,7 @@
         namespace = 'tinynav',
         namespace_i = namespace + i,
         l_namespace_i = '.l_' + namespace_i,
-        $select = $('<select/>').addClass(namespace + ' ' + namespace_i);
+        $select = $('<select/>').attr("id",namespace_i).addClass(namespace + ' ' + namespace_i);
 
       if ($nav.is('ul,ol')) {
 
@@ -61,6 +62,16 @@
 
         // Inject select
         $(l_namespace_i).after($select);
+
+        // Inject label
+        if  (settings.label !== '') {
+          $select.before(
+            $("<label/>")
+              .attr("for", namespace_i)
+              .addClass(namespace + ' ' + namespace_i)
+              .append(settings.label)
+          );
+        }
 
       }
 
