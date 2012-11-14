@@ -64,11 +64,11 @@
         $(l_namespace_i).after($select);
 
         // Inject label
-        if (!settings.label) {
+        if (settings.label) {
           $select.before(
             $("<label/>")
               .attr("for", namespace_i)
-              .addClass(namespace + ' ' + namespace_i)
+              .addClass(namespace + '_label ' + namespace_i + '_label')
               .append(settings.label)
           );
         }
