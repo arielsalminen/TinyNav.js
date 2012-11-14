@@ -1,4 +1,4 @@
-/*! http://tinynav.viljamis.com v1.05 by @viljamis */
+/*! http://tinynav.viljamis.com v1.1 by @viljamis */
 (function ($, window, i) {
   $.fn.tinyNav = function (options) {
 
@@ -19,7 +19,7 @@
         namespace = 'tinynav',
         namespace_i = namespace + i,
         l_namespace_i = '.l_' + namespace_i,
-        $select = $('<select/>').attr("id",namespace_i).addClass(namespace + ' ' + namespace_i);
+        $select = $('<select/>').attr("id", namespace_i).addClass(namespace + ' ' + namespace_i);
 
       if ($nav.is('ul,ol')) {
 
@@ -64,7 +64,7 @@
         $(l_namespace_i).after($select);
 
         // Inject label
-        if  (settings.label !== '') {
+        if (!settings.label) {
           $select.before(
             $("<label/>")
               .attr("for", namespace_i)
