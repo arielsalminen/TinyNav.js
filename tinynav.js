@@ -6,7 +6,8 @@
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
-      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'label'  : '', // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'depth'  : 0 // Depth of navigation to use, 0 for unlimited depth
     }, options);
 
     return this.each(function () {
@@ -36,12 +37,14 @@
           .addClass('l_' + namespace_i)
           .find('a')
           .each(function () {
-            options += '<option value="' + $(this).attr('href') + '">';
-            var j;
-            for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
-              options += '- ';
+            if($(this).parents('ul, ol').length < settings.depth + 1 || settings.depth == 0){
+              options += '<option value="' + $(this).attr('href') + '">';
+              var j;
+              for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
+                options += '- ';
+              }
+              options += $(this).text() + '</option>';
             }
-            options += $(this).text() + '</option>';
           });
 
         // Append options into a select
