@@ -7,14 +7,18 @@
   <title>TinyNav.js &middot; Convert navigation to a tiny select box on small screen</title>
 
   <style>
-    /* styles for desktop */
-    .tinynav { display: none }
+    
+    /* styles for mobile first */
+    .tinynav { display: block }
+    #nav, #nav2 { display: none }
     #nav .selected a, #nav2 .selected a { color: red }
-    /* styles for mobile */
-    @media screen and (max-width: 600px) {
-      .tinynav { display: block }
-      #nav, #nav2 { display: none }
+    
+    /* styles for desktop */
+    @media screen and (min-width: 600px) {
+      .tinynav { display: none }
+      #nav, #nav2 { display: block }
     }
+    
   </style>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
