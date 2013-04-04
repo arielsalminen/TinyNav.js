@@ -52,10 +52,20 @@
 
         // Select the active item
         if (!settings.header) {
-          $select
-            .find(':eq(' + $(l_namespace_i + ' li')
-            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
+            $($select.find("option").get().reverse()).each(function(){
+                if($(this).attr("value") == $('ul.' + l_namespace_i + ' li.' + settings.active + ' a').attr("href")){
+                    $(this).attr('selected', true);
+                    return false;
+                }
+                var nextItem = $('ul.' + l_namespace_i + ' li.' + settings.active);
+                while(nextItem.parents("li").length > 0){
+                    nextItem = nextItem.parents("li");
+                    if($(this).attr("value") == nextItem.children('a').attr("href")){
+                        $(this).attr('selected', true);
+                        return false;
+                    }
+                }
+            });
         }
 
         // Change window location
