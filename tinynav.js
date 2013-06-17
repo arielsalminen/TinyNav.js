@@ -6,7 +6,8 @@
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
-      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'label'  : '', // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'target' : ''
     }, options);
 
     return this.each(function () {
@@ -61,7 +62,12 @@
         });
 
         // Inject select
-        $(l_namespace_i).after($select);
+        if (!settings.target || $(settings.target).length <= 0) {
+          $(l_namespace_i).after($select);
+        }
+        else {
+          $(settings.target).append($select);
+        }
 
         // Inject label
         if (settings.label) {
