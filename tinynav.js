@@ -7,7 +7,7 @@
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
       'label'  : '', // String: sets the <label> text for the <select> (if not set, no label will be added)
-      'target' : ''
+      'target' : '' // String: Set a jquery selector to specify a other target for the select box
     }, options);
 
     return this.each(function () {
