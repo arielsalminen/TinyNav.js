@@ -38,7 +38,7 @@
           .each(function () {
             options += '<option value="' + $(this).attr('href') + '">';
             var j;
-            for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
+            for (j = 0; j < $(this).parentsUntil('.l_'+ namespace_i, 'ul, ol').length; j++) {
               options += '- ';
             }
             options += $(this).text() + '</option>';
