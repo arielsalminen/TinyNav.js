@@ -6,7 +6,8 @@
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
-      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'label'  : '', // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'class'  : ''
     }, options);
 
     return this.each(function () {
@@ -19,7 +20,7 @@
         namespace = 'tinynav',
         namespace_i = namespace + i,
         l_namespace_i = '.l_' + namespace_i,
-        $select = $('<select/>').attr("id", namespace_i).addClass(namespace + ' ' + namespace_i);
+        $select = $('<select/>').attr("id", namespace_i).addClass(namespace + ' ' + namespace_i + ' ' + settings.class);
 
       if ($nav.is('ul,ol')) {
 
