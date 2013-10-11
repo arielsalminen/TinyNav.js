@@ -6,7 +6,8 @@
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
-      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'label'  : '', // String: Sets the <label> text for the <select> (if not set, no label will be added)
+      'element' : '' // String: Inject the select to a specific element
     }, options);
 
     return this.each(function () {
@@ -60,8 +61,14 @@
           window.location.href = $(this).val();
         });
 
-        // Inject select
-        $(l_namespace_i).after($select);
+        // Check if a target element is set
+        if (settings.element) {
+          // Inject select to the target element
+          $(settings.element).append($select);
+        } else {
+          // Inject select after the navigation
+          $(l_namespace_i).after($select);
+        }
 
         // Inject label
         if (settings.label) {
