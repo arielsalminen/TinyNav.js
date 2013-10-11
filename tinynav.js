@@ -61,9 +61,9 @@
           window.location.href = $(this).val();
         });
 
-        // Check if an element is set
-        if(settings.element) {
-          // Inject select to the element
+        // Check if a target element is set
+        if (settings.element) {
+          // Inject select to the target element
           $(settings.element).append($select);
         } else {
           // Inject select after the navigation

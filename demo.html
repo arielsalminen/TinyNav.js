@@ -35,6 +35,9 @@
 
       // TinyNav.js 3
       $('#nav3').tinyNav({
+        active: 'selected',
+        header: 'Header text',
+        label: 'Label text',
         element: '#select-container'
       });
 
@@ -70,8 +73,22 @@
     <ul id="nav3">
       <li><a href="http://google.com">Google</a></li>
       <li><a href="demo.html">Demo page</a></li>
-      <li class="selected"><a href="http://bing.com">Bing</a></li>
-      <li><a href="http://yahoo.com">Yahoo</a></li>
+      <li><a href="http://bing.com">Bing</a>
+        <ul>
+          <li><a href="http://google.com">Google</a></li>
+          <li><a href="demo.html">Demo page</a>
+            <ul>
+              <li><a href="http://google.com">Google</a></li>
+              <li><a href="demo.html">Demo page</a></li>
+              <li><a href="http://bing.com">Bing</a></li>
+              <li><a href="http://yahoo.com">Yahoo</a></li>
+            </ul>
+          </li>
+          <li><a href="http://bing.com">Bing</a></li>
+          <li><a href="http://yahoo.com">Yahoo</a></li>
+        </ul>
+      </li>
+      <li class="selected"><a href="http://yahoo.com">Yahoo</a></li>
       <li><a href="#">This navigation will land in the container</a></li>
     </ul>
 
