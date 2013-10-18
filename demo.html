@@ -8,12 +8,12 @@
 
   <style>
     /* styles for desktop */
-    .tinynav { display: none }
-    #nav .selected a, #nav2 .selected a { color: red }
+    .tinynav, .customnamespace { display: none }
+    #nav .selected a, #nav2 .selected a, #nav3 .selected a { color: red }
     /* styles for mobile */
     @media screen and (max-width: 600px) {
-      .tinynav { display: block }
-      #nav, #nav2 { display: none }
+      .tinynav, .customnamespace { display: block }
+      #nav, #nav2,#nav3 { display: none }
     }
   </style>
 
@@ -31,6 +31,15 @@
       // TinyNav.js 2
       $('#nav2').tinyNav({
         header: 'Navigation' // Writing any title with this option triggers the header
+      });
+
+      // TinyNav.js 3
+      $('#nav3').tinyNav({
+        namespace: 'customnamespace',
+        attr: {
+              customattr:'attrcustom',
+              id:'myid'
+            }
       });
 
     });
@@ -57,6 +66,13 @@
     
     
     <ul id="nav2">
+      <li><a href="http://google.com">Google</a></li>
+      <li><a href="demo.html">Demo page</a></li>
+      <li class="selected"><a href="http://bing.com">Bing</a></li>
+      <li><a href="http://yahoo.com">Yahoo</a></li>
+    </ul>
+
+    <ul id="nav3">
       <li><a href="http://google.com">Google</a></li>
       <li><a href="demo.html">Demo page</a></li>
       <li class="selected"><a href="http://bing.com">Bing</a></li>
