@@ -1,7 +1,7 @@
 # TinyNav.js
-### Responsive navigation plugin that weighs just 443 bytes
+### Responsive navigation plugin that weighs just 452 bytes
 
-[TinyNav.js](http://tinynav.viljamis.com/) is a tiny jQuery plugin (443 bytes minified and gzipped) that converts `<ul>` and `<ol>` navigations to a select boxes for small screen. It also automatically selects the current page and adds `selected="selected"` for that item. There's also a Wordpress plugin available, [here](http://wordpress.org/extend/plugins/tinynav/).
+[TinyNav.js](http://tinynav.viljamis.com/) is a tiny jQuery plugin (452 bytes minified and gzipped) that converts `<ul>` and `<ol>` navigations to a select boxes for small screen. It also automatically selects the current page and adds `selected="selected"` for that item. There's also a Wordpress plugin available, [here](http://wordpress.org/extend/plugins/tinynav/).
 
 This isn't the first plugin to do this and it doesn't provides a lot of options, but it might be the smallest (file size).
 
@@ -18,7 +18,7 @@ License
 
 Licensed under the MIT license.
 
-Copyright (c) 2011-2012 Viljami Salminen, http://viljamis.com/
+Copyright (c) 2011-2014 Viljami Salminen, http://viljamis.com/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -29,6 +29,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Changelog
 ======
+
+v1.2 (2014-02-19) - Adds the "indent" option, thanks to [@kadimi](https://github.com/kadimi)
 
 v1.1 (2012-11-14) - Adds an optional "label" tag before the "select" tag, thanks to [@larcher](https://github.com/larcher)
 
