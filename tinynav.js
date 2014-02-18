@@ -6,6 +6,7 @@
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
+      'indent' : '- ', // String: Specify text for indenting sub-items
       'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
     }, options);
 
@@ -39,7 +40,7 @@
             options += '<option value="' + $(this).attr('href') + '">';
             var j;
             for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
-              options += '- ';
+              options += settings.indent;
             }
             options += $(this).text() + '</option>';
           });
