@@ -5,7 +5,9 @@
     // Default settings
     var settings = $.extend({
       'active' : 'selected', // String: Set the "active" class
-      'header' : '', // String: Specify text for "header" and show header instead of the active item
+      'activeSelected' : true, // Boolean: Whether or not the active item should be selected
+      'header' : '', // String: Specify text for "header"
+      'headerLink' : '/', // String: Specify link for "header" if used
       'indent' : '- ', // String: Specify text for indenting sub-items
       'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
     }, options);
@@ -26,7 +28,7 @@
 
         if (settings.header !== '') {
           $select.append(
-            $('<option/>').text(settings.header)
+            $('<option value="' + settings.headerLink + '" />').text(settings.header)
           );
         }
 
@@ -49,11 +51,12 @@
         $select.append(options);
 
         // Select the active item
-        if (!settings.header) {
-          $select
-            .find(':eq(' + $(l_namespace_i + ' li')
-            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
+        if(settings.activeSelected === true) {
+          var activeMenu = $(l_namespace_i + ' li.' + settings.active + ':last a');
+          if(activeMenu.size()) {
+              var activeVal = activeMenu.attr('href');
+              $("option[value='" + activeVal + "']", $select).attr('selected', true);
+          }
         }
 
         // Change window location
