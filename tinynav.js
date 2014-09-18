@@ -45,16 +45,12 @@
             options += $(this).text() + '</option>';
           });
 
-        // Append options into a select
-        $select.append(options);
-
         // Select the active item
-        if (!settings.header) {
-          $select
-            .find(':eq(' + $(l_namespace_i + ' li')
-            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
-        }
+        $select
+          .append(options)
+          .find(':eq(' + $(l_namespace_i + ' li')
+          .index($(l_namespace_i + ' li.' + settings.active)) + ')')
+          .attr('selected', true);
 
         // Change window location
         $select.change(function () {
