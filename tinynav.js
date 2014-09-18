@@ -49,12 +49,10 @@
         $select.append(options);
 
         // Select the active item
-        if (!settings.header) {
-          $select
-            .find(':eq(' + $(l_namespace_i + ' li')
-            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
-        }
+        $activeIndex = $(l_namespace_i + ' li').index($(l_namespace_i + ' li.' + settings.active));
+        $select
+          .find(':eq(' + ($activeIndex + (settings.header !== '' ? 1 : 0)) + ')')
+          .attr('selected', true);
 
         // Change window location
         $select.change(function () {
