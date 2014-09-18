@@ -45,11 +45,13 @@
             options += $(this).text() + '</option>';
           });
 
+        // Append options into a select
+        $select.append(options);
+
         // Select the active item
+        $activeIndex = $(l_namespace_i + ' li').index($(l_namespace_i + ' li.' + settings.active));
         $select
-          .append(options)
-          .find(':eq(' + $(l_namespace_i + ' li')
-          .index($(l_namespace_i + ' li.' + settings.active)) + ')')
+          .find(':eq(' + ($activeIndex + (settings.header !== '' ? 1 : 0)) + ')')
           .attr('selected', true);
 
         // Change window location
