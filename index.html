@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TinyNav.js &middot; Convert navigation to a select dropdown on small screen</title>
+  <meta name="author" content="Viljami Salminen" />
+  <meta name="description" content="TinyNav.js is a tiny jQuery plugin that automatically converts UL and OL navigation to a tiny select box on small screen." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="jquery.js"></script>
+  <script src="tinynav.min.js"></script>
+  <script>
+    // Remove "no-js" class from <html>
+    document.documentElement.className = "js";
+
+    // TinyNav.js
+    $(function () {
+      $('#nav').tinyNav();
+    });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>TinyNav.js</h1>
+    <h2>Responsive navigation plugin that weighs just 452 bytes</h2>
+    <ul id="nav">
+      <li class="selected"><a href="http://tinynav.com">TinyNav.js</a></li>
+      <li><a href="http://responsiveslides.com">ResponsiveSlides.js</a></li>
+      <li><a href="http://responsive-nav.com">Responsive-Nav.js</a></li>
+    </ul>
+    <p><a href="http://tinynav.com">TinyNav.js</a> is a tiny jQuery plugin (452 bytes minified and gzipped) that converts &lt;ul> and &lt;ol> navigations to a select dropdowns for small screen. It also automatically selects the current page and adds selected="selected" for that item.</p>
+
+<p>This isn’t the first plugin to do this and it doesn't provide a lot of options, but it might be the smallest (file size). Scale this page to see the plugin in action.</p>
+<p>Check out also the new version called <a href="http://responsive-nav.com">Responsive Nav</a>.</p>
+    <h3>Usage:</h3>
+    <h4>1. Link files</h4>
+    <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">&lt;/script>
+&lt;script src="tinynav.min.js">&lt;/script></code></pre>
+    <h4>2. Add Markup</h4>
+    <pre><code>&lt;ul id="nav">
+  &lt;li class="selected">&lt;a href="/">Home&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="/about/">About&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="/contact/">Contact&lt;/a>&lt;/li>
+&lt;/ul></code></pre>
+    <h4>3. Add Styles</h4>
+    <pre><code>/* styles for desktop */
+.tinynav { display: none }
+
+/* styles for mobile */
+@media screen and (max-width: 600px) {
+    .tinynav { display: block }
+    #nav { display: none }
+}</code></pre>
+    <h4>4. Hook up the plugin</h4>
+    <pre><code>&lt;script>
+  $(function () {
+    $("#nav").tinyNav();
+  });
+&lt;/script></code></pre>
+    <h4>5. Options you can customize</h4>
+    <pre><code>$("#nav").tinyNav({
+  active: 'selected', // String: Set the "active" class
+  header: 'Navigation', // String: Specify text for "header" and show header instead of the active item
+  indent: '- ', // String: Specify text for indenting sub-items
+  label: '' // String: Sets the &lt;label> text for the &lt;select> (if not set, no label will be added)
+});</code></pre>
+    <p>That is all! Note: If you worry how this will work when JS is disabled, then I suggest you to add 'js' class for &lt;html> with JavaScript and use that in CSS when hiding the normal navigation, so that the navigation is still accessible if someone is browsing the site JavaScript disabled. Example: </p>
+<h4>JavaScript:</h4>
+<pre><code>$('html').addClass('js');</code></pre>
+<h4>Styles:</h4>
+<pre><code>@media screen and (max-width: 600px) {
+    .js .tinynav { display: block }
+    .js #nav { display: none }
+}</code></pre>
+<h3>TinyNav.js is tested with the following browser</h3>
+    <ul class="list">
+      <li>Internet Explorer 6,7,8,9</li>
+      <li>Firefox 6,8</li>
+      <li>Safari 5</li>
+      <li>Chrome 15</li>
+      <li>Opera 11.5</li>
+      <li>iOS Safari</li>
+      <li>Opera Mobile 10.1</li>
+      <li>Opera Mini for iOS</li>
+      <li>IE7 Mobile</li>
+      <li>Firefox Mobile</li>
+      <li>Android browser</li>
+      <li>Kindle browser</li>
+    </ul>
+    <h3>Support</h3>
+    <p>Please post your bug reports to <a href="https://github.com/viljamis/TinyNav.js/issues">GitHub issues</a>. If you need support, try <a href="http://stackoverflow.com">Stack Overflow</a>.</p>
+
+    <a href="https://github.com/viljamis/TinyNav.js" id="download">Download the latest version from GitHub</a>
+    <p class="footer">TinyNav.js is created by <a href="https://twitter.com/viljamis">@viljamis</a>. It's released under the MIT license.</p>
+  </div>
+  <a href="http://github.com/viljamis/TinyNav.js" class="github"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://viljamis.com/img/forkme.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
