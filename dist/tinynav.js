@@ -7,7 +7,8 @@
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
       'indent' : '- ', // String: Specify text for indenting sub-items
-      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'label'  : '', // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'addHashHistory': false
     }, options);
 
     return this.each(function () {
@@ -55,11 +56,13 @@
             .index($(l_namespace_i + ' li.' + settings.active)) + ')')
             .attr('selected', true);
         }
-
-        // Change window location
-        $select.change(function () {
-          window.location.href = $(this).val();
-        });
+  
+        if (settings.addHashHistory) {
+          // Change window location
+          $select.change(function () {
+            window.location.href = $(this).val();
+          });
+        }
 
         // Inject select
         $(l_namespace_i).after($select);
