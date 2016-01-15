@@ -1,6 +1,6 @@
 {
   "name": "tinynav",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Responsive navigation plugin that weighs just 443 bytes",
   "main": "dist/tinynav.min.js",
   "babel": {
