@@ -1,0 +1,30 @@
+{
+  "name": "tinynav",
+  "version": "1.1.1",
+  "description": "Responsive navigation plugin that weighs just 443 bytes",
+  "main": "dist/tinynav.min.js",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameronjroe/TinyNav.js.git"
+  },
+  "author": "Cameron J Roe <cameronjroe@gmail.com> (http://cameronjroe.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cameronjroe/TinyNav.js/issues"
+  },
+  "homepage": "https://github.com/cameronjroe/TinyNav.js#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
+  }
+}
