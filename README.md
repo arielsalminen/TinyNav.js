@@ -12,7 +12,6 @@ Usage Instructions and demo
 
 For instructions and demo go to [http://tinynav.viljamis.com](http://tinynav.viljamis.com/)
 
-
 License
 ======
 
