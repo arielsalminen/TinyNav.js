@@ -1,0 +1,16 @@
+{
+  "name": "TinyNav.js",
+  "main": "tinynav.js",
+  "version": "v1.1",
+  "homepage": "https://github.com/viljamis/TinyNav.js",
+  "authors": [
+    "@nicoandrade && @viljamis"
+  ],
+  "description": "Responsive navigation plugin that weighs just 443 bytes",
+  "keywords": [
+    "responsive",
+    "navigation",
+    "jquery"
+  ],
+  "license": "MIT"
+}
