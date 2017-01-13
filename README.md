@@ -30,6 +30,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Changelog
 ======
 
+v1.2.1 (2017-01-13) - Add the 'textSelector' option. Allows the user to specify what text is used inside the link.
+
 v1.2 (2014-02-19) - Adds the "indent" option, thanks to [@kadimi](https://github.com/kadimi)
 
 v1.1 (2012-11-14) - Adds an optional "label" tag before the "select" tag, thanks to [@larcher](https://github.com/larcher)
