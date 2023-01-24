@@ -10,7 +10,7 @@ Check out also the new version called [Responsive Nav](http://responsive-nav.com
 Usage Instructions and demo
 ======
 
-For instructions and demo go to [http://tinynav.viljamis.com](http://tinynav.viljamis.com/)
+For instructions and demo go to [http://tinynav.viljamis.com](TinyNav website).
 
 
 License
@@ -18,7 +18,7 @@ License
 
 Licensed under the MIT license.
 
-Copyright (c) 2011-2014 Viljami Salminen, http://viljamis.com/
+Copyright (c) 2011-2023 Ariel Salminen, https://arie.ls/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -50,4 +50,4 @@ v1.00 (2011-12-31) - Release
 Want to do a pull request?
 ======
 
-Great! New ideas are more than welcome, but please check the [Pull Request Guidelines](https://github.com/viljamis/TinyNav.js/wiki/Pull-Request-Guidelines) first before doing so.
+Great! New ideas are more than welcome, but please check the [Pull Request Guidelines](https://github.com/arielsalminen/TinyNav.js/wiki/Pull-Request-Guidelines) first before doing so.

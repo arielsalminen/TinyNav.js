@@ -2,9 +2,9 @@
   "name": "TinyNav.js",
   "main": "tinynav.js",
   "version": "v1.1",
-  "homepage": "https://github.com/viljamis/TinyNav.js",
+  "homepage": "https://github.com/arielsalminen/TinyNav.js",
   "authors": [
-    "@nicoandrade && @viljamis"
+    "@nicoandrade && @arielsalminen"
   ],
   "description": "Responsive navigation plugin that weighs just 443 bytes",
   "keywords": [
