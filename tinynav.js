@@ -37,7 +37,12 @@
           .addClass('l_' + namespace_i)
           .find('a')
           .each(function () {
-            options += '<option value="' + $(this).attr('href') + '">';
+            var url = $(this).attr('href');
+            var disabled = '';
+            if(typeof url === 'undefined'){
+              disabled = 'disabled';
+            }
+            options += '<option value="' + url + '" ' + disabled + '>';
             var j;
             for (j = 0; j < $(this).parents('ul, ol').length - 1; j++) {
               options += settings.indent;
@@ -58,7 +63,9 @@
 
         // Change window location
         $select.change(function () {
-          window.location.href = $(this).val();
+          if( $(this).val() != 'undefined' ){
+            window.location.href = $(this).val();
+          } 
         });
 
         // Inject select
