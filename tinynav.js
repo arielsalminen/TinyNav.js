@@ -53,7 +53,7 @@
           $select
             .find(':eq(' + $(l_namespace_i + ' li')
             .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
+            .prop('selected', true);
         }
 
         // Change window location
