@@ -7,7 +7,8 @@
       'active' : 'selected', // String: Set the "active" class
       'header' : '', // String: Specify text for "header" and show header instead of the active item
       'indent' : '- ', // String: Specify text for indenting sub-items
-      'label'  : '' // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'label'  : '', // String: sets the <label> text for the <select> (if not set, no label will be added)
+      'formClasses' : '' // String: sets the class of the surrounding form object
     }, options);
 
     return this.each(function () {
@@ -20,6 +21,7 @@
         namespace = 'tinynav',
         namespace_i = namespace + i,
         l_namespace_i = '.l_' + namespace_i,
+        $form = $('<form method="get"/>'),
         $select = $('<select/>').attr("id", namespace_i).addClass(namespace + ' ' + namespace_i);
 
       if ($nav.is('ul,ol')) {
@@ -56,13 +58,16 @@
             .attr('selected', true);
         }
 
-        // Change window location
-        $select.change(function () {
-          window.location.href = $(this).val();
+        // submit surrounding form
+        $select.change(function (ev) {
+          $form.attr('action', $(this).val());
+          $form.submit();
         });
 
         // Inject select
-        $(l_namespace_i).after($select);
+        $form.append($select)
+        $form.addClass(settings.formClasses);
+        $(l_namespace_i).after($form);
 
         // Inject label
         if (settings.label) {
